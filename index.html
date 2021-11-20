@@ -15,130 +15,146 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="text-white">
+<body class="text-white sm:bg-gray-900">
 
-<main class="container bg-gray-900 w-screen flex flex-col items-center">
-  <section class="bg-indigo-900 w-5/6 mt-4 ml-4 mr-4 rounded-2xl">
-    <div class="flex justify-center pt-8 pb-8 space-x-10 bg-indigo-600 rounded-2xl font-extralight">
-      <img src="images/image-jeremy.png" alt="Jeremy" class="h-14 w-14 border-solid border-2 border-white rounded-full"/>
-      <div>
+<main class="bg-gray-900 w-screen flex flex-col items-center sm:absolute sm:top-1/4 sm:flex-row sm:items-stretch">
+  <!--'Report for Jeremy Robson' card -->
+  <section class="bg-indigo-900 w-5/6 mt-4 ml-4 mr-4 rounded-2xl sm:w-1/3 sm:mb-4 sm:h-full">
+    <div class="flex justify-center pt-8 pb-8 space-x-4 bg-indigo-600 rounded-2xl font-extralight sm:flex-col">
+      <img src="images/image-jeremy.png" alt="Jeremy" class="h-14 w-14 border-solid border-2 border-white rounded-full sm:ml-6"/>
+      <div class="sm:mt-4 sm:pl-4 sm:pr-2">
         <p class="text-xs">Report for</p>
-        <p class="text-xl">Jeremy Robson
+        <p class="text-2xl">Jeremy Robson
       </div>
     </div>
-    <div class="flex justify-evenly pt-2 pb-2">
+    <div class="flex justify-evenly pt-2 sm:pb-12 sm:flex-col sm:pl-6">
       <a class="text-gray-400 hover:text-white p-2">Daily</a>
       <a class="text-gray-400 hover:text-white p-2">Weekly</a>
       <a class="text-gray-400 hover:text-white p-2">Monthly</a>
     </div>
   </section>
-
-  <section class="bg-yellow-500 w-5/6 mt-4 ml-4 mr-4 rounded-2xl relative pt-10">
-    <img class="absolute top-0 right-0 z-0" src="images/icon-work.svg" alt="work icon" />
-    <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full">
-      <div class="flex flex-col">
-        <p>Work</p>
-        <p class="font-extralight text-2xl">5hrs</p> <!-- daily -->
+  <!--'Each highest parent <div> below defines a card (e.g. work, play, exercise etc).
+  The <section> defines the whole collection of six cards-->
+  <section class="w-5/6 sm:w-full sm:flex-wrap">
+    <!-- row 1 of three cards in desktop view -->
+    <div class="sm:flex">
+      <div class="bg-yellow-500 w-full mt-4 rounded-2xl relative pt-10 sm:mr-4">
+        <img class="absolute top-0 right-0 z-0" src="images/icon-work.svg" alt="work icon" />
+        <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full sm:pb-8">
+          <div>
+            <p>Work</p>
+            <p class="font-extralight text-3xl">5hrs</p> <!-- daily -->
+            <p class="opacity-50 text-xs hidden sm:inline">Previous - 7hrs</p> <!-- daily -->
+          </div>
+          <div class="flex flex-col text-right">
+              <img class="absolute top-0 right-0 pt-6 pr-10" src="images/icon-ellipsis.svg" alt="..." />
+            <p class="opacity-50 text-xs sm:hidden">Previous - 7hrs</p> <!-- daily -->
+          </div>
+        </div>
+      <!--32hrs --> <!-- weekly -->
+      <!--Previous - 36hrs --> <!-- weekly -->
+      <!--103hrs --><!-- monthly -->
+      <!--Previous - 128hrs --> <!-- monthly -->
       </div>
-      <div class="flex flex-col text-right">
-          <img class="absolute top-0 right-0 pt-6 pr-12" src="images/icon-ellipsis.svg" alt="..." />
-        <p class="opacity-50 text-xs">Previous - 7hrs</p> <!-- daily -->
+
+      <div class="bg-blue-400 w-full mt-4 rounded-2xl relative pt-10 sm:mr-4">
+        <img class="absolute top-0 right-0 z-0" src="images/icon-play.svg" alt="work icon" />
+        <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full sm:pb-8">
+          <div>
+            <p>Play</p>
+            <p class="font-extralight text-3xl">1hr</p> <!-- daily -->
+            <p class="opacity-50 text-xs hidden sm:inline">Previous - 2hrs</p> <!-- daily -->
+          </div>
+          <div class="flex flex-col text-right">
+            <img class="absolute top-0 right-0 pt-6 pr-10" src="images/icon-ellipsis.svg" alt="..." />
+            <p class="opacity-50 text-xs sm:hidden">Previous - 2hrs</p> <!-- daily -->
+          </div>
+        </div>
+      <!--10hrs --> <!-- weekly -->
+      <!--Previous - 8hrs --> <!-- weekly -->
+      <!--23hrs --> <!-- monthly -->
+      <!--Previous - 29hrs  --> <!-- monthly -->
+      </div>
+
+      <div class="bg-red-500 w-full mt-4 rounded-2xl relative pt-10 sm:mr-4">
+        <img class="absolute top-0 right-0 z-0" src="images/icon-study.svg" alt="work icon" />
+        <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full sm:pb-8">
+          <div>
+            <p>Study</p>
+            <p class="font-extralight text-3xl">0hrs</p> <!-- daily -->
+            <p class="opacity-50 text-xs hidden sm:inline">Previous - 1hr</p>
+          </div>
+          <div class="flex flex-col text-right">
+            <img class="absolute top-0 right-0 pt-6 pr-10" src="images/icon-ellipsis.svg" alt="..." />
+            <p class="opacity-50 text-xs sm:hidden">Previous - 1hr</p> <!-- daily -->
+          </div>
+        </div>
+      <!--4hrs  --><!-- weekly -->
+      <!--Previous - 7hrs  --><!-- weekly -->
+      <!--13hrs --> <!-- monthly -->
+      <!--Previous - 19hrs --> <!-- monthly -->
       </div>
     </div>
-  <!--32hrs --> <!-- weekly -->
-  <!--Previous - 36hrs --> <!-- weekly -->
-  <!--103hrs --><!-- monthly -->
-  <!--Previous - 128hrs --> <!-- monthly -->
-  </section>
+    <!-- row 2 of three cards in desktop view -->
 
-  <section class="bg-blue-400 w-5/6 mt-4 ml-4 mr-4 rounded-2xl relative pt-10">
-    <img class="absolute top-0 right-0 z-0" src="images/icon-play.svg" alt="work icon" />
-    <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full">
-      <div>
-        <p>Play</p>
-        <p class="font-extralight text-2xl">1hr</p> <!-- daily -->
+    <div class="sm:flex">
+      <div class="bg-green-400 w-full mt-4 sm:mb-10 rounded-2xl relative pt-10 sm:mr-4 sm:w-1/3">
+        <img class="absolute top-0 right-0 z-0" src="images/icon-exercise.svg" alt="work icon" />
+        <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full sm:pb-8">
+          <div>
+            <p>Exercise</p>
+            <p class="font-extralight text-3xl">1hr</p> <!-- daily -->
+            <p class="opacity-50 text-xs hidden sm:inline">Previous - 1hr</p> <!-- daily -->
+          </div>
+          <div class="flex flex-col text-right">
+            <img class="absolute top-0 right-0 pt-6 pr-10" src="images/icon-ellipsis.svg" alt="..." />
+            <p class="opacity-50 text-xs sm:hidden">Previous - 1hr</p> <!-- daily -->
+          </div>
+        </div>
+      <!--4hrs  --><!-- weekly -->
+      <!--Previous - 5hrs  --><!-- weekly -->
+      <!--11hrs  --><!-- monthly -->
+      <!--Previous - 18hrs --> <!-- monthly -->
       </div>
-      <div class="flex flex-col text-right">
-        <img class="absolute top-0 right-0 pt-6 pr-12"src="images/icon-ellipsis.svg" alt="..." />
-        <p class="opacity-50 text-xs">Previous - 2hrs</p> <!-- daily -->
+
+      <div class="bg-purple-600 w-full mt-4 sm:mb-10 rounded-2xl relative pt-10 sm:mr-4 sm:w-1/3">
+        <img class="absolute top-0 right-0 z-0" src="images/icon-social.svg" alt="work icon" />
+        <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full sm:pb-8">
+          <div>
+            <p>Social</p>
+            <p class="font-extralight text-3xl">1hr</p> <!-- daily -->
+            <p class="opacity-50 text-xs hidden sm:inline">Previous - 3hrs</p> <!-- daily -->
+          </div>
+          <div class="flex flex-col text-right">
+            <img class="absolute top-0 right-0 pt-6 pr-12" src="images/icon-ellipsis.svg" alt="..." />
+            <p class="opacity-50 text-xs sm:hidden">Previous - 3hrs</p> <!-- daily -->
+          </div>
+        </div>
+      <!--5hrs --> <!-- weekly -->
+      <!--Previous - 10hrs  --><!-- weekly -->
+      <!--21hrs  --><!-- monthly -->
+      <!--Previous - 23hrs --> <!-- monthly -->
+      </div>
+
+      <div class="bg-yellow-300 w-full mt-4 mb-10 rounded-2xl relative pt-10 sm:mr-4 sm:w-1/3">
+        <img class="absolute top-0 right-0 z-0" src="images/icon-self-care.svg" alt="work icon" />
+        <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full sm:pb-8">
+          <div>
+            <p>Self Care</p>
+            <p class="font-extralight text-3xl">0hrs</p> <!-- daily -->
+            <p class="opacity-50 text-xs hidden sm:inline">Previous - 1hr</p> <!-- daily -->
+          </div>
+          <div class="flex flex-col text-right">
+            <img class="absolute top-0 right-0 pt-6 pr-10" src="images/icon-ellipsis.svg" alt="..." />
+            <p class="opacity-50 text-xs sm:hidden">Previous - 1hr</p> <!-- daily -->
+          </div>
+        </div>
+      <!--2hrs --> <!-- weekly -->
+      <!--Previous - 2hrs --> <!-- weekly -->
+      <!--7hrs --> <!-- monthly -->
+      <!--Previous - 11hrs --> <!-- monthly -->
       </div>
     </div>
-  <!--10hrs --> <!-- weekly -->
-  <!--Previous - 8hrs --> <!-- weekly -->
-  <!--23hrs --> <!-- monthly -->
-  <!--Previous - 29hrs  --> <!-- monthly -->
-  </section>
-
-  <section class="bg-red-500 w-5/6 mt-4 ml-4 mr-4 rounded-2xl relative pt-10">
-    <img class="absolute top-0 right-0 z-0" src="images/icon-study.svg" alt="work icon" />
-    <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full">
-      <div>
-        <p>Study</p>
-        <p class="font-extralight text-2xl">0hrs</p> <!-- daily -->
-      </div>
-      <div class="flex flex-col text-right">
-        <img class="absolute top-0 right-0 pt-6 pr-12"src="images/icon-ellipsis.svg" alt="..." />
-        <p class="opacity-50 text-xs">Previous - 1hr</p> <!-- daily -->
-      </div>
-    </div>
-  <!--4hrs  --><!-- weekly -->
-  <!--Previous - 7hrs  --><!-- weekly -->
-  <!--13hrs --> <!-- monthly -->
-  <!--Previous - 19hrs --> <!-- monthly -->
-  </section>
-
-  <section class="bg-green-400 w-5/6 mt-4 ml-4 mr-4 rounded-2xl relative pt-10">
-    <img class="absolute top-0 right-0 z-0" src="images/icon-exercise.svg" alt="work icon" />
-    <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full">
-      <div>
-        <p>Exercise</p>
-        <p class="font-extralight text-2xl">1hr</p> <!-- daily -->
-      </div>
-      <div class="flex flex-col text-right">
-        <img class="absolute top-0 right-0 pt-6 pr-12"src="images/icon-ellipsis.svg" alt="..." />
-        <p class="opacity-50 text-xs">Previous - 1hr</p> <!-- daily -->
-      </div>
-    </div>
-  <!--4hrs  --><!-- weekly -->
-  <!--Previous - 5hrs  --><!-- weekly -->
-  <!--11hrs  --><!-- monthly -->
-  <!--Previous - 18hrs --> <!-- monthly -->
-  </section>
-
-  <section class="bg-purple-600 w-5/6 mt-4 ml-4 mr-4 rounded-2xl relative pt-10">
-    <img class="absolute top-0 right-0 z-0" src="images/icon-social.svg" alt="work icon" />
-    <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full">
-      <div>
-        <p>Social</p>
-        <p class="font-extralight text-2xl">1hr</p> <!-- daily -->
-      </div>
-      <div class="flex flex-col text-right">
-        <img class="absolute top-0 right-0 pt-6 pr-12"src="images/icon-ellipsis.svg" alt="..." />
-        <p class="opacity-50 text-xs">Previous - 3hrs</p> <!-- daily -->
-      </div>
-    </div>
-  <!--5hrs --> <!-- weekly -->
-  <!--Previous - 10hrs  --><!-- weekly -->
-  <!--21hrs  --><!-- monthly -->
-  <!--Previous - 23hrs --> <!-- monthly -->
-  </section>
-
-  <section class="bg-yellow-300 w-5/6 mt-4 ml-4 mr-4 rounded-2xl relative pt-10">
-    <img class="absolute top-0 right-0 z-0" src="images/icon-self-care.svg" alt="work icon" />
-    <div class="relative z-10 bg-indigo-900 rounded-2xl flex justify-around items-end pt-4 pb-4 w-full">
-      <div>
-        <p>Self Care</p>
-        <p class="font-extralight text-2xl">0hrs</p> <!-- daily -->
-      </div>
-      <div class="flex flex-col text-right">
-        <img class="absolute top-0 right-0 pt-6 pr-12"src="images/icon-ellipsis.svg" alt="..." />
-        <p class="opacity-50 text-xs">Previous - 1hr</p> <!-- daily -->
-      </div>
-    </div>
-  <!--2hrs --> <!-- weekly -->
-  <!--Previous - 2hrs --> <!-- weekly -->
-  <!--7hrs --> <!-- monthly -->
-  <!--Previous - 11hrs --> <!-- monthly -->
   </section>
 </main>
   <div class="attribution">
